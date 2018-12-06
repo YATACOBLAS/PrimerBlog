@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+
+<style>
+header{
+  margin:0px;
+
+}
+.menu{
+  margin-left:25%;
+  margin-right: 15%;
+  margin-top: 5px;
+  background: blue;
+
+margin-bottom: 20px;
+}
+.menu ul {
+list-style:none;
+
+
+}
+.menu ul li{
+  float: left;
+   margin: 0px;
+}
+.menu ul li a {
+  text-decoration: none;
+ padding:20px 40px;
+ margin: 0px;
+ color: white;
+background: red;
+border-bottom: 5px white solid;
+
+}
+.menu ul li a:hover {
+  background: white;
+  color:black;
+  border-bottom: 5px red solid;
+}
+.cuerpo
+{
+  margin: 30px;
+}
+article {
+  width:60%;
+  height: 500px;
+  background: blue;
+  margin: 0px;
+    float: left;
+}
+
+}
+aside{
+  width:30%;
+  height:500px;
+  background: orange;
+  margin: 0px;
+
+}
+section .configuracion{
+width: 100%;
+}
+</style>
+<body>
+  <header id="cabeza"  background="red">
+    <div class="imagen1">
+
+    </div>
+
+    <div class="menu">
+      <ul>
+        <li><a href="">Inicio</a></li>
+        <li><a href="">Node.js</a></li>
+        <li><a href="">JavaScript</a></li>
+        <li><a href="">Git</a></li>
+      </ul>
+    </div>
+    <div class="imagen2">
+
+    </div>
+  </header>
+<br>
+<div class="cuerpo">
+
+                  <section>
+                        <article class="">
+
+                        </article>
+                        <aside>
+                          <div class="configuracion">
+                            <select id="miSelect"class="" name="">
+
+
+                            </select>
+                            <input type="text"  id="option1" name="" value="">
+                             <input type="button" name="" id="" onclick="agregar()" value="Agregar Item">
+                             <select name="" id="head">
+                               <option  value="#CD5C5C">INDIANRED</option>
+                               <option value="#F08080">LIGHTCORAL</option>
+                               <option value="#DC143C">CRIMSON</option>
+                               <option value="#FF0000">RED</option>
+                               <option value="#FF69B4">HOTPINK</option>
+                               <option value="#C71585">MEDIUMVIOLETRED</option>
+                               <option value="#FFA07A">LIGHTSALMON</option>
+                               <option value="#FF7F50">CORAL</option>
+                               <option value="#FF6347">TOMATO</option>
+                               <option value="#FF4500">ORANGERED</option>
+                               <option value="#FFA500">ORANGE</option>
+                               <option value="#FFD700">GOLD</option>
+                               <option value="#F0E68C">KHAKI</option>
+                               <option value="#BDB76B">DARKKHAKI</option>
+                              <option value="#EE82EE">VIOLET</option>
+                              <option value="#FF00FF">FUCHSIA/option>
+                              <option value="#9370DB">MEDIUMPURPLE</option>
+                              <option value="#663399">REBECCAPURPLE</option>
+                              <option value="#800080">PURPLE</option>
+                              <option value="#4B0082">INDIGO</option>
+                              <option value="#7FFF00">CHARTREUSE</option>
+                              <option value="#9400D3">DARKVIOLET</option>
+                              <option value="#7FFF00">CHARTREUSE</option>
+                              <option value="#48D1CC">MEDIUMTURQUOISE</option>
+
+
+                             </select>
+                            <input type="button" name="" id="color" value="Cambiar Color" onclick="colorHead()">
+                             <input type="button" name="" id="color" value="Agregar Imagen">
+                           </div>
+
+                        </aside>
+                  </section>
+
+
+  </div>
+
+<footer></footer>
+
+<script>
+
+function colorHead(){
+
+  var color = document.getElementById("head").value;
+var  head = document.getElementById("cabeza");
+head.style.backgroundColor=color ;
+
+
+
+}
+
+function agregar(){
+  var option =document.createElement("option");
+var item= document.getElementById("option1").value;
+ option.setAttribute("value","1");
+ option.setAttribute("label",item);
+ miSelect.appendChild(option);
+}
+</script>
+
+
+</body>
+</html>

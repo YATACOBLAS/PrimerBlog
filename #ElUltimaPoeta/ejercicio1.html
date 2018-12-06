@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<style>
+section div{
+width: 200px;
+height: 200px;
+  background :blue;
+  display: inline-block;
+}
+
+
+</style>
+<body>
+
+
+    <form action="" name="formulario" method="get">
+
+      <input   type="text"   name="nombre" value="">
+      <br>
+      <input    type="radio"   name="sexo" value="">Hombre
+      <input   type="radio"   name="sexo" value="">Mujer
+        <br>
+      <input   type="CheckBox"   name="terminos" value="">Terminos y Condiciones
+      <br>
+      <input     type="submit"   name="" value="Enviar">
+
+
+
+
+  <script>
+  (
+    function(){
+      var formulario = document.getElementsByName('formulario')[0];
+
+
+    var   validarNombre= function(e){
+   if (formulario.nombre.value == 0){
+  alert("Ingrese el Nombre");
+     }
+e.preventDefault();
+           };
+     var validar = function(e){
+         validarNombre(e);
+
+     };
+
+      formulario.addEventLis tener("submit",validar);
+
+
+
+    }()
+    )
+
+  </script>
+</body>
+</html>

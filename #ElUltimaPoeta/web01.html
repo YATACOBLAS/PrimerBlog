@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Web Ejemplo</title>
+  </head>
+  <body>
+
+    <h1 id = "holamundo"> </h1>
+
+
+    <script src="https://www.gstatic.com/firebasejs/5.5.2/firebase.js"></script>
+    <script>
+      // Initialize Firebase
+      var config = {
+        apiKey: "AIzaSyB0-qJ3QMAb0wC6vtIhS_HWqzKGfhNYgY4",
+        authDomain: "miweb-f2026.firebaseapp.com",
+        databaseURL: "https://miweb-f2026.firebaseio.com",
+        projectId: "miweb-f2026",
+        storageBucket: "miweb-f2026.appspot.com",
+        messagingSenderId: "490647789065"
+      };
+      firebase.initializeApp(config);
+
+  var holamundo = document.getElementById('holamundo');
+  var dbRef = firebase.database().ref().child('texto');
+      dbRef.on('value', snap => holamundo.innerText = snap.val() );
+</script>
+  </body>
+</html>
